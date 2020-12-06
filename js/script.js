@@ -14,6 +14,7 @@ const filterSearch = () => {
     inputSearch.addEventListener('keyup', () => {
         let filter = inputSearch.value.toLowerCase(),
             filterItem = document.querySelectorAll('.brand__item');
+        console.log(filterItem);
         filterItem.forEach(item => {
             if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
                 item.style.display = '';
@@ -26,7 +27,7 @@ const filterSearch = () => {
 
 filterSearch();
 
-btnMore.addEventListener('click', function () {
+btnMore.addEventListener('click', () => {
     brandItemHidden.forEach(item => {
         item.classList.toggle('hidden');
     });
